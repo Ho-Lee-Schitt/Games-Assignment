@@ -1,4 +1,8 @@
 
+\.vs/
+
+Binaries/
+
 Saved/
 
 Intermediate/AssetRegistryCache/
@@ -10,3 +14,7 @@ Intermediate/Config/
 Intermediate/ReimportCache/
 
 Intermediate/CachedAssetRegistry\.bin
+
+*.opendb
+*.VC.opendb
+*.VC.db
