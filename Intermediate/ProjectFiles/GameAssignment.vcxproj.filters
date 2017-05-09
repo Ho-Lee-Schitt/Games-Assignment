@@ -46,12 +46,18 @@
     <ClInclude Include="..\..\Source\GameAssignment\Club.h">
       <Filter>Source\GameAssignment</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GameAssignment\GravityPhysics.h">
+      <Filter>Source\GameAssignment</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\GameAssignment\Golf_Ball.cpp">
       <Filter>Source\GameAssignment</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GameAssignment\Club.cpp">
+      <Filter>Source\GameAssignment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GameAssignment\GravityPhysics.cpp">
       <Filter>Source\GameAssignment</Filter>
     </ClCompile>
   </ItemGroup>

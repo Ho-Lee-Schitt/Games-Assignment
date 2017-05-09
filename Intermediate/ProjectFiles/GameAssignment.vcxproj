@@ -561,8 +561,10 @@
   <ItemGroup>
     <ClCompile Include="..\..\Source\GameAssignment\Club.cpp" />
     <ClCompile Include="..\..\Source\GameAssignment\Golf_Ball.cpp" />
+    <ClCompile Include="..\..\Source\GameAssignment\GravityPhysics.cpp" />
     <ClInclude Include="..\..\Source\GameAssignment\Club.h" />
     <ClInclude Include="..\..\Source\GameAssignment\Golf_Ball.h" />
+    <ClInclude Include="..\..\Source\GameAssignment\GravityPhysics.h" />
     <None Include="..\..\GameAssignment.uproject" />
     <None Include="..\..\Source\GameAssignment.Target.cs" />
     <None Include="..\..\Source\GameAssignmentEditor.Target.cs" />

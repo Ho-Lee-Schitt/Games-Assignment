@@ -8,11 +8,11 @@
 AGolf_Ball::AGolf_Ball()
 {
 	// Load a mesh for the golfball from the starter pack
-	static ConstructorHelpers::FObjectFinder<UStaticMesh> BallMesh(TEXT("/Game/MobileStarterContent/Props/Materials/M_MaterialSphere_Plain.uasset"));
+	//static ConstructorHelpers::FObjectFinder<UStaticMesh> BallMesh(TEXT("/Game/MobileStarterContent/Props/MaterialSphere.uasset"));
 
 	// Create mesh component for the ball
 	Ball = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Ball0"));
-	Ball->SetStaticMesh(BallMesh.Object);
+	//Ball->SetStaticMesh(BallMesh.Object);
 	Ball->BodyInstance.SetCollisionProfileName(UCollisionProfile::PhysicsActor_ProfileName);
 	Ball->SetSimulatePhysics(true);
 	Ball->SetAngularDamping(0.1f);
