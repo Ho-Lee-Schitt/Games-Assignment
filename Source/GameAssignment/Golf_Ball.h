@@ -27,5 +27,10 @@ public:
 	virtual void Tick(float DeltaTime) override;
 
 	void AGolf_Ball::Hit();
+
+	float timePassed;
+
+	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Golf_Ball")
+		bool GravityOn = true;
 	
 };

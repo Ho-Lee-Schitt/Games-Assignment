@@ -26,7 +26,7 @@ AGolf_Ball::AGolf_Ball()
 
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
-
+	timePassed = 0.0f;
 }
 
 // Called when the game starts or when spawned
@@ -40,6 +40,20 @@ void AGolf_Ball::BeginPlay()
 void AGolf_Ball::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	//UE_LOG(LogTemp, Warning, TEXT("Out timePassed %f, delta time: %f, gravity: %d"), timePassed, DeltaTime, GravityOn);
+
+	if (!GravityOn)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("in timePassed %f, delta time: %f"), timePassed, DeltaTime);
+		timePassed += DeltaTime;
+		if (timePassed > 0.001f)
+		{
+			Ball->AddImpulse(FVector(0.0f, 0.0f, 100.0f));
+			UE_LOG(LogTemp, Warning, TEXT("Gravity Off"));
+			timePassed = 0.0f;
+		}
+	}
 
 }
 
