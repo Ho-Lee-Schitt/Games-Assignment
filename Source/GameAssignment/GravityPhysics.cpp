@@ -8,7 +8,7 @@ void AGravityPhysics::ActorEnteredVolume(AActor * Other)
 {
 	float gravNum = GetGravityZ();
 	UE_LOG(LogTemp, Warning, TEXT("Gravity is: %f"), gravNum);
-	Other;
+	// Other;
 }
 
 void AGravityPhysics::ActorLeavingVolume(AActor * Other)

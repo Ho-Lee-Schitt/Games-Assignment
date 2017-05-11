@@ -562,9 +562,13 @@
     <ClCompile Include="..\..\Source\GameAssignment\Club.cpp" />
     <ClCompile Include="..\..\Source\GameAssignment\Golf_Ball.cpp" />
     <ClCompile Include="..\..\Source\GameAssignment\GravityPhysics.cpp" />
+    <ClCompile Include="..\..\Source\GameAssignment\SpringArmComponentLine.cpp" />
+    <ClCompile Include="..\..\Source\GameAssignment\SpringArmLine.cpp" />
     <ClInclude Include="..\..\Source\GameAssignment\Club.h" />
     <ClInclude Include="..\..\Source\GameAssignment\Golf_Ball.h" />
     <ClInclude Include="..\..\Source\GameAssignment\GravityPhysics.h" />
+    <ClInclude Include="..\..\Source\GameAssignment\SpringArmComponentLine.h" />
+    <ClInclude Include="..\..\Source\GameAssignment\SpringArmLine.h" />
     <None Include="..\..\GameAssignment.uproject" />
     <None Include="..\..\Source\GameAssignment.Target.cs" />
     <None Include="..\..\Source\GameAssignmentEditor.Target.cs" />

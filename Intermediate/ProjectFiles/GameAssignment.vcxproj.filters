@@ -49,6 +49,12 @@
     <ClInclude Include="..\..\Source\GameAssignment\GravityPhysics.h">
       <Filter>Source\GameAssignment</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\GameAssignment\SpringArmLine.h">
+      <Filter>Source\GameAssignment</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\GameAssignment\SpringArmComponentLine.h">
+      <Filter>Source\GameAssignment</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Source\GameAssignment\Golf_Ball.cpp">
@@ -58,6 +64,12 @@
       <Filter>Source\GameAssignment</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\GameAssignment\GravityPhysics.cpp">
+      <Filter>Source\GameAssignment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GameAssignment\SpringArmLine.cpp">
+      <Filter>Source\GameAssignment</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\GameAssignment\SpringArmComponentLine.cpp">
       <Filter>Source\GameAssignment</Filter>
     </ClCompile>
   </ItemGroup>

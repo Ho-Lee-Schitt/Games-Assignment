@@ -10,9 +10,14 @@ class GAMEASSIGNMENT_API AGolf_Ball : public AActor
 {
 	GENERATED_BODY()
 
+
+		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Golf_Ball, meta = (AllowPrivateAccess = "true"))
+		class USceneComponent* Root;
+
 		/* StaticMesh used for the ball */
-		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Ball, meta = (AllowPrivateAccess = "true"))
+		UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Golf_Ball, meta = (AllowPrivateAccess = "true"))
 		class UStaticMeshComponent* Ball;
+
 	
 public:	
 	// Sets default values for this actor's properties
@@ -26,11 +31,21 @@ public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
-	void AGolf_Ball::Hit();
+	void Hit();
 
 	float timePassed;
 
-	UPROPERTY(BlueprintReadWrite, VisibleAnywhere, Category = "Golf_Ball")
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Golf_Ball")
 		bool GravityOn = true;
-	
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Golf_Ball")
+		bool BallMoving = false;
+
+
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Golf_Ball")
+		bool BallOnFloor = true;
+
+	UFUNCTION()
+		void OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor,
+			UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit);
 };

@@ -46,7 +46,7 @@ void UClub::BeginPlay()
 void UClub::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
+	// DrawDebug();
 	// ...
 }
 
@@ -70,4 +70,19 @@ void UClub::HitBall()
 {
 	UE_LOG(LogTemp, Warning, TEXT("Ball Has been hit"));
 	myGolfBall->Hit();
+}
+
+FVector UClub::DrawDebug()
+{
+	// Get the direction the player is facing
+	FVector PlayerViewPositionLocation;
+	FRotator PlayerViewPointRotation;
+	GetWorld()->GetFirstPlayerController()->GetPlayerViewPoint(PlayerViewPositionLocation, PlayerViewPointRotation);
+	PlayerViewPositionLocation.Y += 100.0f;
+	FVector LineTraceEnd = PlayerViewPositionLocation + PlayerViewPointRotation.Vector() * 60.0f;
+
+	// Reach being a private float reach 100.0f
+	DrawDebugLine(GetWorld(), PlayerViewPositionLocation, LineTraceEnd, FColor(255, 0, 0), false, 0.0f, 0, 10.0f);
+
+	return (PlayerViewPointRotation.Vector());
 }

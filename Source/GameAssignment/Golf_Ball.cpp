@@ -20,7 +20,9 @@ AGolf_Ball::AGolf_Ball()
 	Ball->BodyInstance.MassScale = 3.5f;
 	Ball->BodyInstance.MaxAngularVelocity = 800.0f;
 	Ball->SetNotifyRigidBodyCollision(true);
+	//Root = CreateDefaultSubobject<USceneComponent>(TEXT("Scene"));
 	RootComponent = Ball;
+	//SetActorLocation(FVector::ZeroVector);
 
 	UE_LOG(LogTemp, Warning, TEXT("Golf Ball Constructor called"));
 
@@ -34,6 +36,7 @@ void AGolf_Ball::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	//Ball->OnComponentHit.AddDynamic(this, &AGolf_Ball::OnHit);
 }
 
 // Called every frame
@@ -49,7 +52,11 @@ void AGolf_Ball::Tick(float DeltaTime)
 		timePassed += DeltaTime;
 		if (timePassed > 0.001f)
 		{
-			Ball->AddImpulse(FVector(0.0f, 0.0f, 100.0f));
+#if PLATFORM_ANDROID
+			Ball->AddImpulse(FVector(0.0f, 0.0f, 200.0f));
+#elif PLATFORM_DESKTOP
+			Ball->AddImpulse(FVector(0.0f, 0.0f, 110.0f));
+#endif
 			UE_LOG(LogTemp, Warning, TEXT("Gravity Off"));
 			timePassed = 0.0f;
 		}
@@ -59,7 +66,23 @@ void AGolf_Ball::Tick(float DeltaTime)
 
 void AGolf_Ball::Hit()
 {
+#if PLATFORM_ANDROID
+	Ball->AddForce(FVector(0.0f, 500000.0f, 0.f));
+#elif PLATFORM_DESKTOP
 	Ball->AddForce(FVector(0.0f, 1000000.0f, 0.f));
+#endif
 	UE_LOG(LogTemp, Warning, TEXT("Ball CPP Has recieved hit"));
+	BallMoving = true;
 }
 
+void AGolf_Ball::OnHit(UPrimitiveComponent * HitComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, FVector NormalImpulse, const FHitResult & Hit)
+{
+	if (BallMoving) {
+		// Check to see if we hit a wall within the course
+		if (OtherActor->GetName().Contains("floor", ESearchCase::IgnoreCase, ESearchDir::FromStart))
+		{
+			UE_LOG(LogTemp, Warning, TEXT("Golf Ball has hit something"));
+			BallOnFloor = true;
+		}
+	}
+}

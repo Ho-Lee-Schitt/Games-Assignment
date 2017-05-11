@@ -32,5 +32,6 @@ public:
 
 	void GetGolfBall();
 	void HitBall();
+	FVector DrawDebug();
 	
 };
