@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{ECAA3131-F810-413D-B51F-1D4F73C5F15E}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{2B53EE20-8176-48CF-92CE-A3E05E3D5D15}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{BD59C089-2EEF-4FD1-829E-5EDB691265B9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Games", "Games", "{8FE25018-37B9-443D-A9DC-F68A00A75EB2}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "UE4", "Intermediate\ProjectFiles\UE4.vcxproj", "{4EDDCE6E-27C3-408A-9540-20940BC051F9}"
 EndProject
@@ -76,11 +76,11 @@ Global
 		{4EDDCE6E-27C3-408A-9540-20940BC051F9}.Shipping|Win64.ActiveCfg = BuiltWithUnrealBuildTool|Win32
 		{4EDDCE6E-27C3-408A-9540-20940BC051F9}.Shipping|Win64.Build.0 = BuiltWithUnrealBuildTool|Win32
 		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame Editor|Android.ActiveCfg = Android_DebugGame_Editor|Win32
+		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame Editor|Android.Build.0 = Android_DebugGame_Editor|Win32
 		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame Editor|HTML5.ActiveCfg = HTML5_DebugGame_Editor|Win32
-		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame Editor|Win32.ActiveCfg = Android_DebugGame_Editor|Win32
-		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame Editor|Win32.Build.0 = Android_DebugGame_Editor|Win32
-		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame Editor|Win64.ActiveCfg = Development_Editor|x64
-		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame Editor|Win64.Build.0 = Development_Editor|x64
+		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame Editor|Win32.ActiveCfg = DebugGame_Editor|Win32
+		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame Editor|Win64.ActiveCfg = DebugGame_Editor|x64
+		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame Editor|Win64.Build.0 = DebugGame_Editor|x64
 		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame|Android.ActiveCfg = Android_DebugGame_Game|Win32
 		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame|Android.Build.0 = Android_DebugGame_Game|Win32
 		{BB9AF75A-C28B-434D-8549-7C01536B2C52}.DebugGame|HTML5.ActiveCfg = HTML5_DebugGame_Game|Win32
@@ -115,7 +115,7 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4EDDCE6E-27C3-408A-9540-20940BC051F9} = {ECAA3131-F810-413D-B51F-1D4F73C5F15E}
-		{BB9AF75A-C28B-434D-8549-7C01536B2C52} = {BD59C089-2EEF-4FD1-829E-5EDB691265B9}
+		{4EDDCE6E-27C3-408A-9540-20940BC051F9} = {2B53EE20-8176-48CF-92CE-A3E05E3D5D15}
+		{BB9AF75A-C28B-434D-8549-7C01536B2C52} = {8FE25018-37B9-443D-A9DC-F68A00A75EB2}
 	EndGlobalSection
 EndGlobal

@@ -29,6 +29,7 @@ AGolf_Ball::AGolf_Ball()
  	// Set this actor to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
 	timePassed = 0.0f;
+	BallStationary = true;
 }
 
 // Called when the game starts or when spawned
@@ -64,15 +65,18 @@ void AGolf_Ball::Tick(float DeltaTime)
 
 }
 
-void AGolf_Ball::Hit()
+void AGolf_Ball::Hit(float force, FVector *direction)
 {
+	LastPosition = GetActorTransform();
 #if PLATFORM_ANDROID
-	Ball->AddForce(FVector(0.0f, 500000.0f, 0.f));
+	Ball->AddForce((*direction)* (force/2));
 #elif PLATFORM_DESKTOP
-	Ball->AddForce(FVector(0.0f, 1000000.0f, 0.f));
+	Ball->AddForce((*direction)* force);
 #endif
 	UE_LOG(LogTemp, Warning, TEXT("Ball CPP Has recieved hit"));
 	BallMoving = true;
+	BallHit = true;
+	BallStationary = false;
 }
 
 void AGolf_Ball::OnHit(UPrimitiveComponent * HitComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, FVector NormalImpulse, const FHitResult & Hit)

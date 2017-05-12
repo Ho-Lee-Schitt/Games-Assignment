@@ -7,7 +7,7 @@
 void USpringArmLine::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
 {
 	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-	DrawDebug();
+	// DrawDebug();
 	// ...
 }
 

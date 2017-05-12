@@ -30,8 +30,14 @@ public:
 
 	UInputComponent* InputComponent = nullptr;
 
-	void GetGolfBall();
-	void HitBall();
+	/** Get the Ball for the Club */
+	UFUNCTION(BlueprintCallable, Category = "NewBall")
+		void GetGolfBall();
+
+	/** Get the Ball for the Club */
+	UFUNCTION(BlueprintCallable, Category = "Club")
+		void HitBall();
+
 	FVector DrawDebug();
 	
 };

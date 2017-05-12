@@ -68,8 +68,9 @@ void UClub::GetGolfBall()
 
 void UClub::HitBall()
 {
+	FVector directionVec = DrawDebug();
 	UE_LOG(LogTemp, Warning, TEXT("Ball Has been hit"));
-	myGolfBall->Hit();
+	myGolfBall->Hit(1000000.0f, &directionVec);
 }
 
 FVector UClub::DrawDebug()
