@@ -18,10 +18,17 @@ Intermediate/CachedAssetRegistry\.bin
 *.opendb
 *.VC.opendb
 *.VC.db
+
 Build/
 
+Android_ASTC
+Build/
+
+WindowsNoEditor
 Intermediate/Android/
 
+
 Intermediate/Staging/
+
 
 Intermediate/UAT/

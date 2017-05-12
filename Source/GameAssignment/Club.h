@@ -4,6 +4,7 @@
 
 #include "Components/ActorComponent.h"
 #include "Golf_Ball.h"
+#include "GameController.h"
 #include "Club.generated.h"
 
 
@@ -28,11 +29,17 @@ public:
 	UPROPERTY(EditAnywhere)
 		class AGolf_Ball* myGolfBall;
 
+	// Reference to the Game controller in the scene
+	UPROPERTY(EditAnywhere)
+		class AGameController* GC;
+
 	UInputComponent* InputComponent = nullptr;
 
 	/** Get the Ball for the Club */
 	UFUNCTION(BlueprintCallable, Category = "NewBall")
 		void GetGolfBall();
+
+	void GetGC();
 
 	/** Get the Ball for the Club */
 	UFUNCTION(BlueprintCallable, Category = "Club")

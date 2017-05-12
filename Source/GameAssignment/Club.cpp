@@ -38,6 +38,7 @@ void UClub::BeginPlay()
 	}
 
 	GetGolfBall();
+	GetGC();
 	
 }
 
@@ -66,11 +67,29 @@ void UClub::GetGolfBall()
 	}
 }
 
+void UClub::GetGC()
+{
+	// Iterate through actors in our scene and get the golf ball
+
+	for (TActorIterator<AGameController> ActorItr(GetWorld()); ActorItr; ++ActorItr)
+	{
+		// Same as with the Object Iterator, access the subclass instance with the * or -> operators.
+		this->GC = *ActorItr;
+
+		if (GC != nullptr)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("%s Game Controller found"), *GC->GetName());
+		}
+	}
+}
+
 void UClub::HitBall()
 {
 	FVector directionVec = DrawDebug();
 	UE_LOG(LogTemp, Warning, TEXT("Ball Has been hit"));
-	myGolfBall->Hit(1000000.0f, &directionVec);
+	float force = GC->GetHitPower();
+	//myGolfBall->Hit(force, &directionVec);
+	myGolfBall->Hit((force * 1000000.0f), &directionVec);
 }
 
 FVector UClub::DrawDebug()
