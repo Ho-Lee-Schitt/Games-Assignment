@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\GameAssignment.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{D22FD0F4-5F56-4150-8D24-76F27ADDA652}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\GameAssignment.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\GameAssignmentEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{CF279626-370A-4B7D-9D5C-42231DDD4665}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\GameAssignment">
+      <UniqueIdentifier>{96484E69-EB44-410C-9A67-511B831DDE18}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\GameAssignment\Club.cpp">
+      <Filter>Source\GameAssignment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameAssignment\Club.h">
+      <Filter>Source\GameAssignment</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\GameAssignment\GameAssignment.Build.cs">
+      <Filter>Source\GameAssignment</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\GameAssignment\GameAssignment.cpp">
+      <Filter>Source\GameAssignment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameAssignment\GameAssignment.h">
+      <Filter>Source\GameAssignment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameAssignment\Golf_Ball.cpp">
+      <Filter>Source\GameAssignment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameAssignment\Golf_Ball.h">
+      <Filter>Source\GameAssignment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameAssignment\GravityPhysics.cpp">
+      <Filter>Source\GameAssignment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameAssignment\GravityPhysics.h">
+      <Filter>Source\GameAssignment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameAssignment\PlayerCharacterCamera.cpp">
+      <Filter>Source\GameAssignment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameAssignment\PlayerCharacterCamera.h">
+      <Filter>Source\GameAssignment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameAssignment\SpringArmComponentLine.cpp">
+      <Filter>Source\GameAssignment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameAssignment\SpringArmComponentLine.h">
+      <Filter>Source\GameAssignment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\GameAssignment\SpringArmLine.cpp">
+      <Filter>Source\GameAssignment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\GameAssignment\SpringArmLine.h">
+      <Filter>Source\GameAssignment</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\GameAssignment\GameController.h">
+      <Filter>Source\GameAssignment</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\GameAssignment\GameController.cpp">
+      <Filter>Source\GameAssignment</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
