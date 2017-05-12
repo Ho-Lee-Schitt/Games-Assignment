@@ -47,6 +47,9 @@ void AGolf_Ball::Tick(float DeltaTime)
 
 	//UE_LOG(LogTemp, Warning, TEXT("Out timePassed %f, delta time: %f, gravity: %d"), timePassed, DeltaTime, GravityOn);
 
+	// Here we deal with gravity by offsetting it by adding a counter force every hundreth of a second.
+	// For any more gravatational effects it would be a matter of doing the same force application but in a different direction.
+
 	if (!GravityOn)
 	{
 		UE_LOG(LogTemp, Warning, TEXT("in timePassed %f, delta time: %f"), timePassed, DeltaTime);
@@ -65,6 +68,7 @@ void AGolf_Ball::Tick(float DeltaTime)
 
 }
 
+// Apply the force on the golf ball. Android has reduiced force as the same force applied tended to launch the ball too fast.
 void AGolf_Ball::Hit(float force, FVector *direction)
 {
 	LastPosition = GetActorTransform();
