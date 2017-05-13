@@ -1,4 +1,8 @@
 
+\.vs/
+
+Binaries/
+
 Saved/
 
 Intermediate/AssetRegistryCache/
@@ -10,3 +14,23 @@ Intermediate/Config/
 Intermediate/ReimportCache/
 
 Intermediate/CachedAssetRegistry\.bin
+
+*.opendb
+*.VC.opendb
+*.VC.db
+
+Build/
+
+Android_ASTC
+Build/
+
+WindowsNoEditor
+Intermediate/Android/
+
+
+Intermediate/Staging/
+
+
+Intermediate/UAT/
+
+Android/
