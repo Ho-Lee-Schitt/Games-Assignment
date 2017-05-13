@@ -1,4 +1,4 @@
-GameAssignment
+Games Assignment - ZeroG Golf
 
 Instructions for use:
 
